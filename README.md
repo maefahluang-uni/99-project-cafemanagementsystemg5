@@ -10,3 +10,5 @@ List your group's member's below with ID and name.
 6531503105 Thanakrit Sittipornrattanamanee
 6531503108 Teetat Teerawaropas
 6531503119 Rawikorn Nuntawong
+
+test cloundbuild
