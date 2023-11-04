@@ -4,6 +4,8 @@ public class Stock {
     private Long id;
     private String name;
     private int value;
+    private Admin admin;
+
     public Long getId() {
         return id;
     }
@@ -21,6 +23,12 @@ public class Stock {
     }
     public void setValue(int value) {
         this.value = value;
+    }
+    public Admin getAdmin() {
+        return admin;
+    }
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
     }
 
 

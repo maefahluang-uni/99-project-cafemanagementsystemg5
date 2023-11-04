@@ -4,6 +4,7 @@ import java.lang.annotation.Inherited;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.List;
 
 import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
@@ -27,6 +28,7 @@ import javax.transaction.Transactional;
 
 import th.CustomerRepository;
 import th.mfu.Domain.Customer;
+import th.mfu.Domain.Stock;
 import th.AdminRepository;
 
 @Controller
@@ -50,10 +52,10 @@ public class CafeController{
         // TODO: add concert to model
         model.addAttribute("concert", adrepo.findById(concertId).get());
         // TODO: add empty reservation to model
-        Reservation reservation = new Reservation();
-        model.addAttribute("reservation", reservation);
+        Stock stock = new Stock();
+        model.addAttribute("reservation", stock);
         // TODO: find available seats (booked=false) by given concert's id to the model
-        List<Seat> seats = seatRepo.findByBookedFalseAndConcertId(concertId);
+        List<Admin> admin = adrepo.findByBookedFalseAndConcertId(Stock);
         model.addAttribute("seats", seats);
         return "reserve-seat";
     }
