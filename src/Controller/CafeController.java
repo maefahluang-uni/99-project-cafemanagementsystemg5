@@ -1,4 +1,4 @@
-package th.mfu;
+
 
 import java.lang.annotation.Inherited;
 import java.text.SimpleDateFormat;
@@ -55,8 +55,8 @@ public class CafeController{
         Stock stock = new Stock();
         model.addAttribute("reservation", stock);
         // TODO: find available seats (booked=false) by given concert's id to the model
-        List<Admin> admin = adrepo.findByBookedFalseAndConcertId(Stock);
-        model.addAttribute("seats", seats);
+        List<Admin> admin = adrepo.findAllById();
+        model.addAttribute("seats", stock);
         return "reserve-seat";
     }
  
@@ -69,7 +69,7 @@ public class CafeController{
         //TODO: set booked to true
         seat.setBooked(true);
         //TODO: save seat
-        seatRepo.save(seat);
+        adrepo.save(seat);
         // TODO: save reservation using reservationRepo
         reservationRepo.save(reservation);
         return "redirect:/book";
