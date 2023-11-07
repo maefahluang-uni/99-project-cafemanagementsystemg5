@@ -12,52 +12,47 @@
        
     }
    
-    a.coffee-cus.html{
-           /* Coffee */
 
-        position: absolute;
-        width: 58px;
-        height: 24px;
-        left: 75px;
-        top: 379px;
-        font-family: 'Itim';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
-        color: #cc3434;
-
-        mix-blend-mode: normal; 
-    }
-    img.coffee{
+    
+    .coffee{
         position: absolute;
         width: 135px;
         height: 183px;
         left: 37px;
         top: 240px;
+        touch-action: manipulation;
+        background-image: url("image/coffee.png");
+        background-repeat: no-repeat;
     }
-    img.tea{
+
+    .tea{
         position: absolute;
         width: 135px;
         height: 183px;
         left: 216px;
         top: 240px;
+        background-image: url("image/tea.png");
+  background-repeat: no-repeat;
     }
-    img.non{
+    .non{
         position: absolute;
         width: 135px;
         height: 183px;
         left: 37px;
         top: 452px;
+        background-image: url("image/non-coffee.png");
+  background-repeat: no-repeat;
     }
-    img.bakery{
+    .bakery{
         position: absolute;
         width: 135px;
         height: 183px;
         left: 216px;
         top: 452px;
+        background-image: url("image/bakery.png");
+  background-repeat: no-repeat;
     }
-    img.name_shop{
+    .name_shop{
         position: absolute;
         width: 281px;
         height: 112px;
@@ -65,8 +60,10 @@
         top: 34px;
 
         mix-blend-mode: normal;
+        background-image: url("image/name shop.png");
+  background-repeat: no-repeat;
     }
-    img.logo{
+    .logo{
         position: absolute;
         width: 134px;
         height: 147px;
@@ -78,10 +75,14 @@
         height: 147px;
         left: 271px;
         top: 38px;
+       
+  background-image: url("image/logo.png");
+  background-repeat: no-repeat;
 
-        background: url(3981dfd6928b25a1116ed685e6790bd0.png);
     }
-    img.back-cream{
+   
+        
+    .back-cream{
         /* Group 29 */
 
         position: absolute;
@@ -103,26 +104,34 @@
         background: #FBF8EA;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 0px;
+     
+        background-image: url("image/Group\ 29.png");
+        background-color: #cccccc;
+
 
 
 
     }
-    
+    body {
+  background-image: url("image/backgroud\ green.png");
+  background-repeat: no-repeat;
+
+
+}
   
     </style> 
 </head>
 <body>
-    <img class="name_shop" src="name shop.png">
-    <img class="logo" src="logo.png">
-    <img class="back-green" src="backgroud green.png">
-    <img class="back-cream" src="Group 29.png">
-    <div class="pic">
-        <a href="../coffee-cus/coffee-cus.html"><img class="coffee" src ="coffee.png"></a>
-        <a href="../tea-cus/tea-cus.html"><img class="tea" src ="tea.png"></a>
-        <a href="../non-cus/non-cus.html"><img class="non" src ="non-coffee.png"></a>
-        <a href="../bakery-cus/bakery-cus.html"><img class="bakery" src ="bakery.png"></a>
-    </div>
-     
+    <div class="logo"></div>
+    <div class="name_shop"></div>
+    <div class="back-cream"></div>
+    
+    <a href="../coffee-cus/coffee-cus.html" class="coffee">
+    <a href="../tea-cus/tea-cus.html" class="tea"></a>
+    <a href="../non-cus/non-cus.html"class="non"></a>
+    <a href="../bakery-cus/bakery-cus.html" class="bakery"></a>
+    
+    
     
 
 </body>
