@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+import java.util.Date;
 
 @Entity
 @Table(name="TBL_ADMIN")
@@ -20,6 +20,8 @@ public class Admin {
     private String name;
     @Column(name="Value")
     private int value;
+    @Column(name="Date")
+    private Date date;
     public Long getId() {
         return id;
     }
@@ -37,6 +39,12 @@ public class Admin {
     }
     public void setValue(int value) {
         this.value = value;
+    }
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     

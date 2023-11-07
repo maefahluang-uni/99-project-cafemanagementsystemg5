@@ -40,7 +40,7 @@ public class AdminController
 							throws RecordNotFoundException 
 	{
 		
-		System.out.println("editEmployeeById" + id);
+		System.out.println("editAdminById" + id);
 		if (id.isPresent()) {
 			Admin entity = service.getAdminById(id.get());
 			model.addAttribute("Item", entity);
@@ -63,10 +63,10 @@ public class AdminController
 		return "redirect:/";
 	}
 
-	@RequestMapping(path = "/createEmployee", method = RequestMethod.POST)
+	@RequestMapping(path = "/createAdmin", method = RequestMethod.POST)
 	public String createOrUpdateItem(Admin item) 
 	{
-		System.out.println("createOrUpdateEmployee ");
+		System.out.println("createOrUpdateAdmin ");
 		
 		service.createOrUpdateItem(item);
 		
