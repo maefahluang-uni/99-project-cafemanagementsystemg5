@@ -7,12 +7,14 @@
 </head>
 <body>
     <div class="Topic">Tea</div>
-    <div class="backgroudgreen">
     <div class="back-cream"></div>
+    <a href="../cart/cart-cus.html" class="cart"><img src="Tea-image/shopping-cart.png" class="cart-image"></a>
     <a href="../coffee-cus/coffee-cus.html" class="coffee">Coffee</a>
     <a href="../non-cus/non-cus.html"class="non">Non-Coffee</a>
     <a href="../bakery-cus/bakery-cus.html" class="bakery">Bakery</a>
-    <div class="menu1">Boba tea</div>
+    <div class="P1"><div class="text">Boba Tea</div><img class="drink" src="Tea-image/boba.png"><a href="../add-menu/add-menu.html" class="Bobatea"><span class="Pice">60B</span><img class="arrow" src="Tea-image/Arrow 1.png"></a></div></div>
+    <div class="P2"><div class="text">Matcha Green  Tea</div><img class="drink"src="Tea-image/green tea.png"><div class="Text"><a href="../add-menu/add-menu.html" class="Matchagreentea"><span class="Pice">60B</span><img class="arrow" src="Tea-image/Arrow 1.png"></a></div></div>
+    <div class="P3"><div class="text">Thai Milk Tea</div><img class="drink"src="Tea-image/cha thai.png"><a href="../add-menu/add-menu.html" class="Thaimilktea"><span class="Pice">60B</span><img class="arrow" src="Tea-image/Arrow 1.png"></a></div></div>
 </body>
 <style>
     .Topic{
@@ -25,9 +27,8 @@
         line-height: normal;
         mix-blend-mode: darken;
         position: absolute;
-        margin-left: 5%;
-        margin-right: auto;
-        margin-top: 10%;
+        margin-left: 37px;
+        margin-top: 50px;
         flex-shrink: 0;
     }
     body {
@@ -36,12 +37,12 @@
     }
 
     .back-cream{
-        border-radius: 30px 30px 0px 0px;
         position: absolute;
         width: 390px;
         height: 729px;
         left: 0px;
-        top: 147px;
+        top: 142px;
+        border-radius: 30px 30px 0px 0px;
         background-color: #FBF8EA;
         box-shadow: 0px 4px 4px 0px  rgba(0, 0, 0, 0.25);
     }
@@ -63,8 +64,8 @@
         list-style: none;
         margin-left: 0px;
         outline: none;
-        position: relative;
-        left: 40px;
+        position: absolute;
+        left: 55px;
         top: 150px;
         text-align: center;
         text-decoration: none;
@@ -96,10 +97,11 @@
         height: 24px;
         line-height: 20px;
         list-style: none;
-        margin-left: 25px;
+        margin-left: 20px;
+        margin-right: 25px;
         outline: none;
-        position: relative;
-        left: 55px;
+        position: absolute;
+        left: 150px;
         top: 150px;
         text-align: center;
         text-decoration: none;
@@ -132,8 +134,8 @@
         list-style: none;
         margin-left: 25px;
         outline: none;
-        position: relative;
-        left: 55px;
+        position:absolute;
+        left: 266px;
         top: 150px;
         text-align: center;
         text-decoration: none;
@@ -150,24 +152,241 @@
     background-color: #C09A7E;
     }
     
-    .menu1{
+    .Bobatea{background-color: #AA713A;
+        border-radius: 9px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: JejuGothic;
+        font-size: 14px;
+        font-weight: 400;
+        width: 113px;
+        height: 18px;
+        line-height: 20px;
+        list-style: none;
+        outline: none;
         position:absolute;
-        left: 37px;
-        bottom: 458px;
-        width: 135px;
-        height: 117px;
-        margin-left: 37px;
-        margin-right: 46;
-        flex-shrink: 0;
-        border-radius: 10px;
-        background: #F5F5F5;
-
+        margin-left: 11px;
+        margin-right: 11px;
+        margin-top: 92px;
+        margin-bottom: 7px;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
-    
-   
-    
 
+    .Bobatea:hover,
+    .Bobatea:focus {
+    background-color: #C09A7E;
+    }
+    
+    .Matchagreentea{ background-color: #AA713A;
+        border-radius: 9px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: JejuGothic;
+        font-size: 14px;
+        font-weight: 400;
+        width: 113px;
+        height: 18px;
+        line-height: 20px;
+        list-style: none;
+        margin-left: 11px;
+        margin-right: 11px;
+        margin-top: 92px;
+        margin-bottom: 7px;
+        outline: none;
+        position:absolute;
+        text-align: left;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .Matchagreentea:hover,
+    .Matchagreentea:focus {
+    background-color: #C09A7E;
+    }
+    
+    .Thaimilktea{ background-color: #AA713A;
+        border-radius: 9px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: JejuGothic;
+        font-size: 14px;
+        font-weight: 400;
+        width: 113px;
+        height: 18px;
+        line-height: 20px;
+        list-style: none;
+        margin-left: 0;
+        outline: none;
+        position:absolute;
+        margin-left: 11px;
+        margin-right: 11px;
+        margin-top: 92px;
+        margin-bottom: 7px;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .Thaimilktea:hover,
+    .Thaimilktea:focus {
+    background-color: #C09A7E;
+    }
+    .bg{
+        border-radius: 10px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .P1{
+        border-radius: 10px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        left: 37px;
+        top: 280px;
+        width: 135px;
+        height: 117px;
+        flex-shrink: 0;
+        display: inline-flex;
+        font-family: JejuGothic;
+        color: #000;
+        font-family: JejuGothic;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+    .text{
+        position: absolute;
+        display: inline-flex;
+        margin-top: 47px;
+        margin-left: 8px;
+        margin-bottom: 53px;
+    }
+    .P2{
+        border-radius: 10px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        left: 218px;
+        top: 280px;
+        bottom: 465px;
+        width: 135px;
+        height: 117px;
+        flex-shrink: 0;
+
+    }
+    .P3{
+        border-radius: 10px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        left: 37px;
+        top: 508px;
+        bottom: 465px;
+        width: 135px;
+        height: 117px;
+        flex-shrink: 0;
+
+    }
+    .drink{
+        display:inline-block;
+        width: 80px;
+        height: 125px;
+        flex-shrink: 0;
+        margin-left: 35px;
+        margin-right: 20px;
+        margin-top: -55%;
+        position: absolute;
+
+    }
+    .Pice{ 
+        width: 80px;
+        height: 125px;
+        margin-left: 16px;
+        margin-right:0;
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    .arrow{
+        
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 55px;
+       
+    }
+    .cart{
+        background: #C09A7E;
+        border: 1px solid #b89c81;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-flex;
+        position: absolute;
+        letter-spacing: -.24px;
+        margin: 0;
+        quotes: auto;
+        left: 340px;
+        top: 70px;
+        outline: 0;
+        width: 35px;
+        height: 35px;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: all .15s;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cart:hover{
+        background-color: #C09A7E;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transform: scale(1.3);
+.cart:active {
+    transform: scale(1.15);
+}
+
+    
+    
+    .cart-image{
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        margin-left: 4px;
+        margin-right:0px;
+        margin-top: 4px;
+    }
+}
     
 </style>
 </html>
