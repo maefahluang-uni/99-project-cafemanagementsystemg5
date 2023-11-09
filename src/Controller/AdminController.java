@@ -49,7 +49,7 @@ public class AdminController
 		}
 		
 		
-		return "add-edit-employee";
+		return "add-edit-admin";
 	}
 	
 	@RequestMapping(path = "/delete/{id}")

@@ -18,10 +18,10 @@ public class Admin {
     private Long id;
     @Column(name="Name")
     private String name;
-    @Column(name="Value")
-    private int value;
     @Column(name="Date")
     private Date date;
+    @Column(name="Value")
+    private int value;
     public Long getId() {
         return id;
     }
