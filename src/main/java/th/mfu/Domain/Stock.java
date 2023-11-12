@@ -6,15 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Column;
 
-@Entity
-@Table(name="TBL_STOCK")
     
 public class Stock {
-    @Column(name="Name")
     private String name;
-    @Column(name="Value")
     private int  value;
-    @Column(name="Date")
     private Date date;
 
     public String getName() {
