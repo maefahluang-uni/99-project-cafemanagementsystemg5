@@ -16,9 +16,9 @@ public class StockService {
 	@Autowired
 	EmployeeRepository repository;
 	
-	public List<Admin> getAllEmployees()
+	public List<Admin> getAllEAdmins()
 	{
-		System.out.println("getAllEmployees");
+		System.out.println("getAllStock");
 		List<Admin> result = (List<Admin>) repository.findAll();
 		
 		if(result.size() > 0) {
@@ -41,7 +41,7 @@ public class StockService {
 		}
 	}
 	
-	public Admin createOrUpdateEmployee(Admin entity) 
+	public Admin createOrUpdateAdmin(Admin entity) 
 	{
 		System.out.println("createOrUpdateStock");
 		// Create new entry 
