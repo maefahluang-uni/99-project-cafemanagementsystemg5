@@ -1,12 +1,13 @@
 package th.mfu.Domain;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import java.sql.ResultSet;
+@Entity
 public class Menu {
+    @Id
    private String name;
    private int value;
-    private Barista barista;
-    private Admin admin;
-    private Customer customer;
 
 
 public String getName() {
@@ -21,25 +22,6 @@ public int getValue() {
 public void setValue(int value) {
     this.value = value;
 }
-public Barista getBarista() {
-    return barista;
-}
-public void setBarista(Barista barista) {
-    this.barista = barista;
-}
-public Admin getAdmin() {
-    return admin;
-}
-public void setAdmin(Admin admin) {
-    this.admin = admin;
-}
-public Customer getCustomer() {
-    return customer;
-}
-public void setCustomer(Customer customer) {
-    this.customer = customer;
-}
- 
 
 
 
