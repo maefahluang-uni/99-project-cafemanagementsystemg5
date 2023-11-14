@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${stock != null ? 'Edit Stock' : 'Add Stock'}">Add/Edit Stock</title>
+</head>
+<body>
+    <h1 th:text="${stock != null ? 'Edit Stock' : 'Add Stock'}">Add/Edit Stock</h1>
+    <form th:action="@{/stocks}" th:object="${stock}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" required>
+        </div>
+        <div>
+            <label for="value">Value:</label>
+            <input type="text" id="value" th:field="*{value}" required>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" th:field="*{date}" required>
+        </div>
+        <div>
+            <button type="submit">Save Stock</button>
+        </div>
+    </form>
+    <a href="/stocks">Cancel</a>
+</body>
+</html>
