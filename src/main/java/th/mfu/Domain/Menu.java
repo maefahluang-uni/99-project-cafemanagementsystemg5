@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 public class Menu {
     @Id
    private String name;
-   private int value;
+   private int price;
 
 
 public String getName() {
@@ -16,11 +16,15 @@ public String getName() {
 public void setName(String name) {
     this.name = name;
 }
-public int getValue() {
-    return value;
+public int getPrice() {
+    return price;
 }
-public void setValue(int value) {
-    this.value = value;
+public void setPrice(int price) {
+    this.price = price;
+}
+public Menu(String name, int price) {
+    this.name = name;
+    this.price = price;
 }
 
 
