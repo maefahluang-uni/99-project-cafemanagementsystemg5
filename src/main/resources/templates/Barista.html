@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barista Dashboard</title>
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+    <script>
+        // Function to connect to WebSocket
+        function connectWebSocket() {
+            var socket = new SockJS('/websocket-endpoint');
+            var stompClient = Stomp.over(socket);
+
+            stompClient.connect({}, function (frame) {
+                console.log('Connected: ' + frame);
+
+                // Subscribe to Barista topic
+                stompClient.subscribe('/topic/barista', function (message) {
+                    // Update the notification section
+                    $('#notification').text(message.body);
+                });
+            });
+        }
+
+        // Call the connectWebSocket function when the page is loaded
+        $(document).ready(function () {
+            connectWebSocket();
+        });
+    </script>
+</head>
+<body>
+
+<h1>Welcome Barista!</h1>
+
+<!-- Display Barista Orders -->
+<h2>Barista Orders</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Order Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Use Thymeleaf to loop through Barista orders -->
+        <tr th:each="order : ${baristaOrders}">
+            <td th:text="${order.id}"></td>
+            <td th:text="${order.customerName}"></td>
+            <td th:text="${order.orderDetails}"></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Notification Section -->
+<h2>Notifications</h2>
+<div id="notification"></div>
+
+</body>
+</html>

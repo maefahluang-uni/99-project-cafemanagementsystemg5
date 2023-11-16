@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Desktop Version -->
+    <div id="container" class="container">
+        <div id="menu">
+            <div class="brand-logo">
+                <img src="./images/logover2.png" alt="logo">
+                
+            </div>
+            
+        </div>
+
+        <div id="drink-container">
+            <div id="header">
+                <div class="add-box">
+                    <div class="null"></div>
+                </div>
+                <div class="util">
+                    <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+                </div>
+            </div>
+            <div id="drink-items">
+
+                <div id="coffee">
+                    <p id="category-name">Coffee</p>                   
+                </div>
+
+                <div id="tea">
+                    <p id="category-name">Tea</p>
+                </div>
+
+                <div id="non">
+                    <p id="category-name">Non-Coffee</p>                  
+                </div>
+
+                <div id="bakery">
+                    <p id="category-name">Bakery</p>
+                </div>
+            </div>
+
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Cart Items</p>
+                <p id="m-total-amount">Totle Amount : 60 Bath</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="table-body">
+                       
+                    </tbody>
+                </table>
+                <div class="btn-box">
+                    <a href="../blank.html"><button class="cart-btn">Checkout</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <p class="item-menu">Category List</p>
+                <div class="border"></div>
+            </div>
+            <div id="category-list">
+
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item"></p>
+                <p id="total-price"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Version -->
+    <div id="mobile-view" class="mobile-view">
+        <div class="mobile-top">
+            <div class="logo-box">
+                <img src="./images/logover2.png" alt="" id="logo">
+                <i class="fa fa-cart-plus" id="m-cart-plus"> 0 </i>
+            </div>
+            <div class="top-menu">
+                <i class="null"></i>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="category-header" id="category-header"></div>
+
+            
+        </div>
+
+        <div class="mobile-footer">
+            
+        </div>
+        
+    </div>
+
+
+
+
+
+    <!-- Link Javascript-->
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
