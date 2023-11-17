@@ -61,5 +61,15 @@
 <h2>Notifications</h2>
 <div id="notification"></div>
 
+
+
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var somedata = /*[[${test}]]*/ 'default';
+    console.log(somedata);
+    /*]]>*/
+</script>
+
 </body>
 </html>

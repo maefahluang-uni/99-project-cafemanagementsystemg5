@@ -37,7 +37,7 @@
 //     @PostMapping("/close-shop")
 //     public void closeShop() {
 //         // Perform logic for closing the shop
-
+// 
 //         // Send daily total sale to admin
 //         double dailyTotalSale = baristaService.calculateDailyTotalSale();
 //         messagingTemplate.convertAndSend("/topic/admin", "Daily total sale: " + dailyTotalSale);

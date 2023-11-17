@@ -1,40 +1,124 @@
-<!-- list-stock.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/main/resources/static/styletiger.css">
-    <title>List Stocks</title>
+    <title>Stock List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>List of Stocks</h1>
-</body>
-<div class="container">
-    <table >
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Value</th>
-            <th>Action</th>
-        </tr>
-        <!-- Loop through stocks and display information -->
-        <th:each="stock:${stocks}">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Admin Stock page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Check Daily Total sales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <h1>Stock List</h1>
+    <a class="btn btn-primary" href="/add-stock">Add New Stock</a>
+    
+    <table id="myTable">
+        <thead>
             <tr>
-                <td>${stock.id}</td>
-                <td>${stock.name}</td>
-                <td>${#dates.format(stock.date, 'yyyy-MM-dd')}</td>
-                <td>${stock.value}</td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody th:each="stock : ${stocks}">
+            <tr th:id="'stockRow_' + ${stock.id}">
+                <td th:text="${stock.id}">ID</td>
+                <td th:text="${stock.name}">Name</td>
+                <td th:text="${stock.value}">Value</td>
+                <td th:text="${#dates.format(stock.date, 'yyyy-MM-dd')}">Date</td>
                 <td>
-                    <a th:href="@{/stocks/{id}(id=${stock.id})}" class="Edit">Edit</a>
-                    |
-                    <a th:href="@{/delete-stock/{id}(id=${stock.id})}" onclick="return confirm('Are you sure you want to delete this stock?');" class="Delete">Delete</a>
+                    <a class="btn btn-warning" th:href="@{/stocks/{id}(id=${stock.id})}">Edit</a>
+                    <a class="btn btn-danger" th:href="@{/delete-stock/{id}(id=${stock.id})}" th:onclick="'return confirm(\'Are you sure you want to delete this stock?\');'">Delete</a>
                 </td>
             </tr>
-        </th:each>
+        </tbody>
     </table>
-    <a th:href="@{/add-stock}" class="add-stock">Add Stock</a>
-</div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var somedata = /*[[${stocks}]]*/ 'default';
+        console.log(somedata);
+
+        function deleteStock(id) {
+            if (confirm('Are you sure you want to delete this stock?')) {
+                // Perform AJAX request or any other delete logic here
+                // For demonstration, let's log the ID to console
+                console.log('Deleting stock with ID:', id);
+
+                // Remove the row from the table
+                var row = document.querySelector('[th\\:id="stockRow_' + id + '"]');
+                if (row) {
+                    row.remove();
+                }
+            }
+        }
+        /*]]>*/
+    </script>
 </body>
 </html>
