@@ -1,4 +1,4 @@
-// package th.mfu.Controller;
+package th.mfu.Controller;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -9,7 +9,6 @@
 // import java.util.*;
 
 // @RestController
-// @RequestMapping("/api/barista")
 // public class BaristaController {
 
 //     private final BaristaService baristaService;
@@ -21,28 +20,28 @@
 //         this.messagingTemplate = messagingTemplate;
 //     }
 
-//     // @GetMapping("/orders")
-//     // public List<Order> getBaristaOrders() {
-//     //     return baristaService.getBaristaOrders();
-//     // }
+    // @GetMapping("/orders")
+    // public List<Order> getBaristaOrders() {
+    //     return baristaService.getBaristaOrders();
+    // }
 
-//     // @PostMapping("/notify")
-//     // public void notifyBarista(@RequestBody Order order) {
-//     //     baristaService.notifyBarista(order);
+    // @PostMapping("/notify")
+    // public void notifyBarista(@RequestBody Order order) {
+    //     baristaService.notifyBarista(order);    
 
-//     //     // Notify the barista through WebSocket
-//     //     messagingTemplate.convertAndSend("/topic/barista", "New order received!");
-//     // }
+        // Notify the barista through WebSocket
+    //     messagingTemplate.convertAndSend("/topic/barista", "New order received!");
+    // }
 
-//     @PostMapping("/close-shop")
-//     public void closeShop() {
-//         // Perform logic for closing the shop
-// 
-//         // Send daily total sale to admin
-//         double dailyTotalSale = baristaService.calculateDailyTotalSale();
-//         messagingTemplate.convertAndSend("/topic/admin", "Daily total sale: " + dailyTotalSale);
-//     }
+    // @PostMapping("/close-shop")
+    // public void closeShop() {
+    //     // Perform logic for closing the shop
 
-//     // Add more methods as needed...
+    //     // Send daily total sale to admin
+    //     double dailyTotalSale = baristaService.calculateDailyTotalSale();
+    //     messagingTemplate.convertAndSend("/topic/admin", "Daily total sale: " + dailyTotalSale);
+    // }
+
+    // Add more methods as needed...
 
 // }

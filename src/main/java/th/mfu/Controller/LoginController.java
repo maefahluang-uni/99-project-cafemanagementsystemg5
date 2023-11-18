@@ -41,27 +41,4 @@ public class LoginController {
     }
 
 
-
-    // @GetMapping("/view")
-    // public String userShopping() {
-    //     return "main";
-    // }
-
-    // @GetMapping("/admin")
-    // public String showAdminDashboard() {
-    //     return "admin-dashboard";
-    // }
-
-    // @GetMapping("/Hab")
-    // public String hahh(Model model) {
-    //     Admin admin = new Admin();
-    //     admin.setName("hdfjjvgfdkhg");
-    //     model.addAttribute("test", admin);
-    //     return "Barista";
-    // }
-
-    // @GetMapping("/barista")
-    // public String showBaristaDashboard() {
-    //     return "barista-dashboard";
-    // }
     }
