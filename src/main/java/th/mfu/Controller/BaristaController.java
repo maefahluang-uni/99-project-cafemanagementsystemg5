@@ -1,47 +1,33 @@
 package th.mfu.Controller;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.messaging.simp.SimpMessagingTemplate;
-// import org.springframework.web.bind.annotation.*;
 
-// import th.mfu.Domain.*;
-// import th.mfu.Service.*;
-// import java.util.*;
 
-// @RestController
-// public class BaristaController {
+import th.mfu.Domain.*;
+import th.mfu.Repository.*;
+import th.mfu.Service.*;
+import java.util.*;
 
-//     private final BaristaService baristaService;
-//     private final SimpMessagingTemplate messagingTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+public class BaristaController {
+    @Autowired
+    BaristaRepository repository;
 
-//     @Autowired
-//     public BaristaController(BaristaService baristaService, SimpMessagingTemplate messagingTemplate) {
-//         this.baristaService = baristaService;
-//         this.messagingTemplate = messagingTemplate;
-//     }
 
-    // @GetMapping("/orders")
-    // public List<Order> getBaristaOrders() {
-    //     return baristaService.getBaristaOrders();
-    // }
+    @GetMapping("/barista-page")
+    public String baristapage(Model model){
+        model.addAttribute("order", repository.findAll());
+        return "Barista";
+    }
+    
 
-    // @PostMapping("/notify")
-    // public void notifyBarista(@RequestBody Order order) {
-    //     baristaService.notifyBarista(order);    
 
-        // Notify the barista through WebSocket
-    //     messagingTemplate.convertAndSend("/topic/barista", "New order received!");
-    // }
-
-    // @PostMapping("/close-shop")
-    // public void closeShop() {
-    //     // Perform logic for closing the shop
-
-    //     // Send daily total sale to admin
-    //     double dailyTotalSale = baristaService.calculateDailyTotalSale();
-    //     messagingTemplate.convertAndSend("/topic/admin", "Daily total sale: " + dailyTotalSale);
-    // }
-
-    // Add more methods as needed...
-
-// }
+}

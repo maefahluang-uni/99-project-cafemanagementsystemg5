@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class StockController {
-
+    
     @Autowired
     StockRepository repository;
 
