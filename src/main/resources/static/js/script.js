@@ -1,4 +1,4 @@
-import { drinkItem } from "./drinkItem.js";
+import { drinkItem } from "../js/drinkItem.js";
 
 function displayItems(){
     var coffee = document.getElementById('coffee');

@@ -3,7 +3,7 @@ const drinkItem =[
         id: 1,
         name: 'Latte',
         category:'coffee',
-        img: 'images/coffee/latte.png',
+        img: '../static/images/coffee/latte.png',
         price: 60,
         quantity: 1
     },
@@ -11,7 +11,7 @@ const drinkItem =[
         id: 2,
         name: 'Mocha',
         category:'coffee',
-        img: 'images/coffee/mocha.png',
+        img: '../static/images/coffee/mocha.png',
         price: 60,
         quantity: 1
     },
@@ -19,7 +19,7 @@ const drinkItem =[
         id: 3,
         name: 'Cuppuccino',
         category:'coffee',
-        img: 'images/coffee/cuppuccino.png',
+        img: '../static/images/coffee/cuppuccino.png',
         price: 60,
         quantity: 1
     },
@@ -27,7 +27,7 @@ const drinkItem =[
         id: 4,
         name: 'Caramel Macchiato',
         category:'coffee',
-        img: 'images/coffee/caramel.png',
+        img: '../static/images/coffee/caramel.png',
         price: 60,
         quantity: 1
     },
@@ -35,7 +35,7 @@ const drinkItem =[
         id: 5,
         name: 'Americano',
         category:'coffee',
-        img: 'images/coffee/americano.png',
+        img: '../static/images/coffee/americano.png',
         price: 60,
         quantity: 1
     },
@@ -43,7 +43,7 @@ const drinkItem =[
         id: 6,
         name: 'Espresso',
         category:'coffee',
-        img: 'images/coffee/espresso.png',
+        img: '../static/images/coffee/espresso.png',
         price: 60,
         quantity: 1
     },
@@ -51,7 +51,7 @@ const drinkItem =[
         id: 7,
         name: 'Boba Tea',
         category:'tea',
-        img: 'images/tea/boba.png',
+        img: '../static/images/tea/boba.png',
         price: 60,
         quantity: 1
     },
@@ -59,7 +59,7 @@ const drinkItem =[
         id: 8,
         name: 'Matcha Green Tea',
         category:'tea',
-        img: 'images/tea/matcha.png',
+        img: '../static/images/tea/matcha.png',
         price: 60,
         quantity: 1
     },
@@ -67,7 +67,7 @@ const drinkItem =[
         id: 9,
         name: 'Thai Milk Tea',
         category:'tea',
-        img: 'images/tea/thai.png',
+        img: '../static/images/tea/thai.png',
         price: 60,
         quantity: 1
     },
@@ -75,7 +75,7 @@ const drinkItem =[
         id: 10,
         name: 'Fresh Milk',
         category:'non',
-        img: 'images/non/milk.png',
+        img: '../static/images/non/milk.png',
         price: 60,
         quantity: 1
     },
@@ -83,7 +83,7 @@ const drinkItem =[
         id: 11,
         name: 'Honey Lemon',
         category:'non',
-        img: 'images/non/lemon.png',
+        img: '../static/images/non/lemon.png',
         price: 60,
         quantity: 1
     },
@@ -91,7 +91,7 @@ const drinkItem =[
         id: 12,
         name: 'Cocoa',
         category:'non',
-        img: 'images/non/cocoa.png',
+        img: '../static/images/non/cocoa.png',
         price: 60,
         quantity: 1
     },
@@ -99,7 +99,7 @@ const drinkItem =[
         id: 13,
         name: 'Crossiant',
         category:'bakery',
-        img: 'images/bakery/crossiant.png',
+        img: '../static/images/bakery/crossiant.png',
         price: 80,
         quantity: 1
     },
@@ -107,7 +107,7 @@ const drinkItem =[
         id: 14,
         name: 'Crepe Cake',
         category:'bakery',
-        img: 'images/bakery/crepe.png',
+        img: '../static/images/bakery/crepe.png',
         price: 65,
         quantity: 1
     },
@@ -115,7 +115,7 @@ const drinkItem =[
         id: 15,
         name: 'Brownie',
         category:'bakery',
-        img: 'images/bakery/brownie.png',
+        img: '../static/images/bakery/brownie.png',
         price: 40,
         quantity: 1
     },
