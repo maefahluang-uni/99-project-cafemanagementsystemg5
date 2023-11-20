@@ -10,8 +10,10 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String username;
     private String password;
+    private String cart;
     public String getUsername() {
         return username;
     }
@@ -23,6 +25,26 @@ public class User {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getCart() {
+        return cart;
+    }
+    public void setCart(String cart) {
+        this.cart = cart;
+    }
+    public User(String username, String password, String cart) {
+        this.username = username;
+        this.password = password;
+        this.cart = cart;
+    }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public User(Long id) {
+        this.id = id;
     }
     
 }

@@ -3,6 +3,9 @@ package th.mfu.Controller;
 import th.mfu.Domain.*;
 import th.mfu.Service.*;
 import java.util.*;
+
+import javax.transaction.Transactional;
+
 import th.mfu.Controller.*;
 import th.mfu.Repository.*;
 
@@ -21,46 +24,39 @@ import com.mysql.cj.x.protobuf.MysqlxCrud.Order;
 @Controller
 @RequestMapping("/")
 public class UserController {
+    @Autowired
+    AdminRepository adminrepo;
     
-        
-     @Autowired
-     AdminRepository adminrepo;
-     @Autowired
-     OrderRepository menurepo;
-     @Autowired
-     CustomerRepository cusrepo;
+    @Autowired
+    OrderRepository menurepo;
 
+    @Autowired
+    CustomerRepository cusrepo;
     
-
-    
-     public UserController(AdminRepository adminrepo, OrderRepository menurepo, CustomerRepository cusrepo) {
+    public UserController(AdminRepository adminrepo, OrderRepository menurepo, CustomerRepository cusrepo) {
         this.adminrepo = adminrepo;
         this.menurepo = menurepo;
         this.cusrepo = cusrepo;
     }
 
-     @GetMapping("/view")
+    @GetMapping("/view")
     public String userShopping() {
         return "main";
     }
-    // @GetMapping("/")
-    //  public String AddMenu(Model model){
-    //      model.addAttribute("addMenu",AddMenu(model));
-    //      return "add-menu";
-    //  }
-
-
+    @GetMapping("/addmenu")
+    public String AddMenu(Model model){
+        model.addAttribute("addMenu", AddMenu(model));
+        return "main";
+    }
     //  @GetMapping("carts")
     //  public String AddToCart(Model model){
     //      model.addAttributes("addcart",new Cart());
-    //      return "cart-cus";
+    //      return "main";
     //  }
-
     //  @PostMapping("carts")
     //  public String saveCart(@ModelAttribute Cart addcart){
     //      cusrepo.save(addcart);
-    //      return "redirect:/carts";
-
+    //      return "redirect:/main";
     //  }
     //  @Transactional
 	//  @RequestMapping(path = "/delete/{id}")
@@ -68,10 +64,8 @@ public class UserController {
     //  throws RecordNotFoundException 
     //  {
     //      System.out.println("deleteItemById" + id);
-		
 	//  	service.deleteItemById(id);
-	//  	return "redirect:/carts";
-
+	//  	return "redirect:/main";
     //  }
     
 }

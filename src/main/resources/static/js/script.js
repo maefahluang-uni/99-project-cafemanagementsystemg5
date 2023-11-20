@@ -1,4 +1,5 @@
-import { drinkItem } from "../js/drinkItem.js";
+import { drinkItem } from "./123drinkItem.js";
+console.log(drinkItem);
 
 function displayItems(){
     var coffee = document.getElementById('coffee');
@@ -6,7 +7,7 @@ function displayItems(){
     var non = document.getElementById('non');
     var bakery = document.getElementById('bakery');
 
-    const coffeeData = drinkItem.filter(item=> item.category=='coffee');
+    const coffeeData = drinkItem.filter(item=> item.category=='coffee');        
     const teaData = drinkItem.filter(item=> item.category=='tea');
     const nonData = drinkItem.filter(item=> item.category=='non');
     const bakeryData = drinkItem.filter(item=> item.category=='bakery');
@@ -200,6 +201,7 @@ function cartItems(){
         
         var rowData1= document.createElement('td');
         var img= document.createElement('img');
+        console.log(item.img)
         img.src= item.img;
         rowData1.appendChild(img);
     
@@ -320,6 +322,7 @@ function cartToggle(){
 
 window.onresize= window.onload= function(){
     var size = window.innerWidth;
+    console.log("sdnfjhsdjfhisd")
     console.log(size)
     if(size<800){
         var cloneDrinkItems = document.getElementById('drink-items').cloneNode(true);
