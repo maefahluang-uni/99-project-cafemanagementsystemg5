@@ -92,6 +92,7 @@ td{
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
+    border: none;
 }
 .nav-item{
     display: flex;
