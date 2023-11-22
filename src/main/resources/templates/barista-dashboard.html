@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barista Dashboard</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/barista.css">
+        
     <style>
         body {
             padding: 20px;
@@ -24,34 +23,25 @@
     </style>
 </head>
 <body>
+    <a href="/barista-dashboard"><img src="../static/images/home.png"></a>
      <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
-            <a class="navbar-brand" href="/barista-dashboard">Barista Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/barista-page">Customer Order</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Log Out</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <h1>Welcome to the Barista Dashboard</h1>
+    <h1>Barista Dashboard</h1>
 
     <!-- Content of the barista dashboard -->
 
     <!-- Button to send daily sales to Admin -->
-    <button onclick="sendDailySales()">Send Daily Sales to Admin</button>
+    <nav class="navbar">
+        <li class="nav-item">
+            <button onclick="sendDailySales()" class="nav-link">Send Daily Sales</button>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/barista-page">Customer Order</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-logout" href="/login">Log Out</a>
+        </li>
+    </nav>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
