@@ -16,12 +16,6 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // @OneToOne
-    // @JoinColumn(name = "customer_id")
-    // private Customer owner; // Customer only
-
-    // @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-    // private List<Menu> data;
 
     public Long getId() {
         return id;
@@ -29,18 +23,6 @@ public class Cart {
     public void setId(Long id) {
         this.id = id;
     }
-    // public Customer getOwner() {
-    //     return owner;
-    // }
-    // public void setOwner(Customer owner) {
-    //     this.owner = owner;
-    // }
-    // public List<Menu> getData() {
-    //     return data;
-    // }
-    // public void setData(List<Menu> data) {
-    //     this.data = data;
-    // }
     public void setName(String name) {
         this.name = name;
     }

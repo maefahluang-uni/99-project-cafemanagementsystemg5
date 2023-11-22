@@ -13,8 +13,6 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    // @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
-    // private Cart cart;
 
     public String getName() {
         return name;
@@ -28,10 +26,5 @@ public class Customer {
     public void setId(Long id) {
         this.id = id;
     }
-    // public Cart getCart() {
-    //     return cart;
-    // }
-    // public void setCart(Cart cart) {
-    //     this.cart = cart;
-    // }
+   
 }

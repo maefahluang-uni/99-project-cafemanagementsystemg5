@@ -11,16 +11,6 @@ public class Menu {
     private String name;
     private int price;
 
-    // @ManyToOne
-    // @JoinColumn(name = "cart_id")
-    // private Cart cart;
-
-    // public Cart getCart() {
-    //     return cart;
-    // }
-    // public void setCart(Cart cart) {
-    //     this.cart = cart;
-    // }
     public String getName() {
         return name;
     }

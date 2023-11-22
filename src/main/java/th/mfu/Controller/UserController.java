@@ -48,24 +48,4 @@ public class UserController {
         model.addAttribute("addMenu", AddMenu(model));
         return "main";
     }
-    //  @GetMapping("carts")
-    //  public String AddToCart(Model model){
-    //      model.addAttributes("addcart",new Cart());
-    //      return "main";
-    //  }
-    //  @PostMapping("carts")
-    //  public String saveCart(@ModelAttribute Cart addcart){
-    //      cusrepo.save(addcart);
-    //      return "redirect:/main";
-    //  }
-    //  @Transactional
-	//  @RequestMapping(path = "/delete/{id}")
-    //  public String deleteItemById(Model model, @PathVariable("id") Long id)
-    //  throws RecordNotFoundException 
-    //  {
-    //      System.out.println("deleteItemById" + id);
-	//  	service.deleteItemById(id);
-	//  	return "redirect:/main";
-    //  }
-    
 }
