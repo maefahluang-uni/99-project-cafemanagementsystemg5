@@ -1,11 +1,14 @@
 package th.mfu.Domain;
 
+
+import java.util.*;
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -22,6 +25,11 @@ public class Admin {
     private Date date;
     @Column(name="Value")
     private int value;
+
+    @OneToMany(mappedBy = "admin")
+    private List<Stock> stocks;
+    
+
     public Long getId() {
         return id;
     }
@@ -49,6 +57,12 @@ public class Admin {
     @Override
     public String toString() {
         return "Admin [id=" + id + ", name=" + name + ", date=" + date + ", value=" + value + "]";
+    }
+    public List<Stock> getStocks() {
+        return stocks;
+    }
+    public void setStocks(List<Stock> stocks) {
+        this.stocks = stocks;
     }
 
     
