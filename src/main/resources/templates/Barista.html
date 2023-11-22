@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <link rel="stylesheet" href="../static/css/barista.css">
 
     <script>
         // Function to connect to WebSocket
@@ -34,12 +35,16 @@
     </script>
 </head>
 <body>
+   
+    <!-- Notification Section -->
+<div class="notification" id="notification"><img src="../static/images/home.png"></div>
 
-<h1>Welcome Barista!</h1>
+<h1>Barista</h1>
 
 <!-- Display Barista Orders -->
+<div class="container">
 <h2>Barista Orders</h2>
-<table border="1">
+<table>
     <thead>
         <tr>
             <th>ID</th>
@@ -56,10 +61,8 @@
         </tr>
     </tbody>
 </table>
+</div>
 
-<!-- Notification Section -->
-<h2>Notifications</h2>
-<div id="notification"></div>
 
 
 
