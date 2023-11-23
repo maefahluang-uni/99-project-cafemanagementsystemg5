@@ -19,8 +19,7 @@ public class Barista {
     @Column(name="password")
 
 
-    @OneToMany(mappedBy = "barista")
-    private List<Menu> menus;
+
 
     @OneToMany(mappedBy = "barista")
     private List<Customer> customers;
@@ -38,12 +37,8 @@ public class Barista {
     public void setPassword(Integer password) {
         this.password = password;
     }
-    public List<Menu> getMenus() {
-        return menus;
-    }
-    public void setMenus(List<Menu> menus) {
-        this.menus = menus;
-    }
+    
+    
     public List<Customer> getCustomers() {
         return customers;
     }

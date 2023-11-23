@@ -22,9 +22,6 @@ public class Cart {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "cart")
-    private List<Item> items;
-
     public Long getId() {
         return id;
     }
@@ -43,12 +40,6 @@ public class Cart {
     }
     public void setCustomer(Customer customer) {
         this.customer = customer;
-    }
-    public List<Item> getItems() {
-        return items;
-    }
-    public void setItems(List<Item> items) {
-        this.items = items;
     }
     
 }

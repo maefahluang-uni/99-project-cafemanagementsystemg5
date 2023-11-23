@@ -18,6 +18,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String name;
     @OneToOne(mappedBy = "customer")
     private Cart cart;
@@ -28,8 +29,6 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "barista_id")
     private Barista barista;
-
-
 
     public String getName() {
         return name;
@@ -43,12 +42,12 @@ public class Customer {
     public void setId(Long id) {
         this.id = id;
     }
-    public Cart getCart() {
-        return cart;
-    }
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
+    // public Cart getCart() {
+    //     return cart;
+    // }
+    // public void setCart(Cart cart) {
+    //     this.cart = cart;
+    // }
     public List<Menu> getMenus() {
         return menus;
     }

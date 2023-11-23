@@ -44,36 +44,27 @@ public class AdminController {
         model.addAttribute("stocks", repository.findAll());
         return "list-stock";
     }
-
-   
-
     @GetMapping("/add-stock")
     public String addStock(Model model) {
         model.addAttribute("stock", new Stock());
         return "add-edit-stock";
     }
-
     @PostMapping("/stocks")
     public String saveStock(@ModelAttribute Stock stock) {
         repository.save(stock);
         return "redirect:/stocks";
     }
-
     @GetMapping("/stocks/{id}")
     public String getStock(Model model, @PathVariable Long id) {
         Stock stock = repository.findById(id).get();
         model.addAttribute("stock", stock);
         return "add-edit-stock";
     }
-
-
     @GetMapping("/delete-stock/{id}")
     public String deleteStock(@PathVariable long id) {
         repository.deleteById(id);
         return "redirect:/stocks";
     }
-
-    
     @GetMapping("/delete-stock")
     public String removeAllStocks() {
         repository.deleteAll();

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${daily != null ? 'Edit Sales' : 'Add Sales'}">Edit Sales</title>
+</head>
+<body>
+    <h1 th:text="${daily != null ? 'Edit Sales' : 'Add Sales'}">Edit Sales</h1>
+    <form th:action="${daily != null ? '/dailysale/' + daily.id + '/edit' : '/dailysale'}" th:object="${daily}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" required>
+        </div>
+        <div>
+            <label for="value">Value:</label>
+            <input type="text" id="value" th:field="*{value}" required>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" th:field="*{date}" required>
+        </div>
+        <div>
+            <button type="submit">Update Sales</button>
+        </div>
+    </form>
+    <a href="/dailysale">Cancel</a>
+</body>
+</html>

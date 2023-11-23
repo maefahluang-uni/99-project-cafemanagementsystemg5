@@ -31,9 +31,9 @@
     <!-- Content of the barista dashboard -->
 
     <!-- Button to send daily sales to Admin -->
-    <nav class="navbar">
+    <nav class="navbar"> 
         <li class="nav-item">
-            <button onclick="sendDailySales()" class="nav-link">Send Daily Sales</button>
+            <a class="nav-link" href="/dailysale">Send daily sales</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/barista-page">Customer Order</a>
@@ -55,31 +55,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-        // ตัวอย่างโค้ดใน Barista
-        function sendDailySalesData() {
-    var dailySalesData = {
-        // ข้อมูลยอดขายประจำวัน
-        // สามารถเพิ่ม properties ตามต้องการ
-        sales: 1500,
-        // ...
-    };
-
-    // ทำ HTTP POST request ไปยัง endpoint ของ Admin
-    $.ajax({
-        type: "POST",
-        url: "/update-daily-total-sales",
-        contentType: "application/json",
-        data: JSON.stringify(dailySalesData),
-        success: function (response) {
-            console.log(response);
-        },
-        error: function (error) {
-            console.error("Error updating daily total sales:", error);
-        }
-    });
-}
-
-        
     </script>
 </body>
 </html>
