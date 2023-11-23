@@ -4,8 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #FBF8EA;
+        }
+        .header h1{
+           justify-content: center;
+           align-items: center;
+           display: flex;
+           margin: 20px;
+           font-size: 50px;
+           font-weight: 400;
+           font-family: 'JejuGothic';
+           color: #8F5C2A;
+           font-style: normal;          
+        }
+        .header hr{
+            border: 1px solid #D9D9D9;
+            transform: rotate(-0.01deg);
+        }
+        .container{
+            padding: 5px;
+            margin-top: 30px;           
+        }
+        .container img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+        }
+        .queue-num{
+            margin: 10px;
+        }
+        .queue-num h2{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            display: flex;
+            padding: 80px;
+            margin-top: 50px;
+            font-size: 50px;
+            background-color: #D6B9A7;
+            color: #4E1717;
+            border-radius: 20px;
+            width: 250px;
+            font-family: 'JejuGothic';
+            font-style: normal;
+        }
+        .queue-num h3{
+            margin-top: 20px;
+            font-family: 'JejuGothic';
+            font-style: normal;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .notification{
+            margin: 10px;
+            padding: 20px;
+        }
+        .notification h1{
+            margin-top: 50px;
+            font-size: 25px;
+            font-family: 'JejuGothic';
+            font-style: normal;
+            font-weight: 400;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            background: #bbbbbb;  
+            width: 550px;
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+
+        }
+
+
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-    <h1>Queue 1</h1>
+    <div class="header">
+        <h1 class="queues">Queues</h1>  
+        <hr>
+    </div>
+    <div class="container">
+        <div class="logo">
+            <img src="../static/images/logover2.png" alt="logo">
+        </div>
+        <div class="queue-num">
+            <h2>A03</h2>
+            <h3>Queue : A01</h3>
+        </div>
+        <div class="notification">
+            <h1>If your order is finished we will inform you.</h1>
+        </div>
+    </div>
+
+
+
+
+
+
 </body>
 </html>

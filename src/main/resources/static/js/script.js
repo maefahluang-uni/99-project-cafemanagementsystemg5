@@ -322,7 +322,6 @@ function cartToggle(){
 
 window.onresize= window.onload= function(){
     var size = window.innerWidth;
-    console.log("sdnfjhsdjfhisd")
     console.log(size)
     if(size<800){
         var cloneDrinkItems = document.getElementById('drink-items').cloneNode(true);
