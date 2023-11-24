@@ -43,7 +43,7 @@
         }
         
 
-        .nav-check{
+        #check{
             border-radius: 40px;
             background: #C09A7E;
             padding: 5px;
@@ -51,6 +51,8 @@
             color: rgb(255, 255, 255);
             float: right;
             margin: 10px;
+            border: none;
+            cursor: pointer;
         }
         .add-stock{
             border-radius: 40px;
@@ -62,7 +64,7 @@
             
         }
            
-            img{
+        img{
             width: 25px;
             height: 25px;
             border-radius: 15px;
@@ -82,7 +84,7 @@
                 <img src="/images/home.png" >
             </a>
             <div class="h1">Stock List</div>
-            <a class="nav-check" href="/stocks">Check Daily Total sales</a> 
+            <button id="check">Check daily total sale</button>
             <a class="add-stock" href="/add-stock">Add New Stock</a>    
 
     
@@ -140,7 +142,16 @@
                 }
             }
         }
-        /*]]>*/
+        
+
+        const check = document.getElementById("check");
+
+        check.addEventListener("click",function(){
+
+            alert("No daily total sale in this time.");
+        });
+
     </script>
+    
 </body>
 </html>
