@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF8F1;
+}
+.header img{
+    background-color: #C09A7E;
+    width: 50px;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.header h1{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'JejuGothic';
+    color: #8F5C2A;
+    font-style: normal;   
+    margin: 20px;
+}
+.header hr{
+    border: 1px solid #D9D9D9;
+    transform: rotate(-0.01deg);
+}
+.container{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow: hidden;
+}
+#drink-receipt{
+    padding: 20px;
+    margin: 30px;
+    margin-top: 50px;
+    background:#D9D9D9 ;
+    width: 250px;
+    height: 500px;
+    position: relative;
+}
+#queue-num{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'JejuGothic';
+    font-style: normal; 
+    background:#ebeaea;
+    padding: 15px;
+    text-align: center;
+}
+#drink-list{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background:#D9D9D9 ;
+    margin-top: 10px;
+}
+#name{
+    font-size: 20px;
+    background-color: #D9D9D9;
+    margin: 15px;
+}
+#quantity{
+    font-size: 25px;
+    background-color: #D9D9D9;
+}
+#btn{
+    background-color: #D9D9D9;
+}
+#confirm-btn{
+    font-size: 25px;
+    background-color: #8F5C2A;
+    font-family: 'JejuGothic';
+    color: #000000;
+    font-style: normal; 
+    margin: 10px;
+    padding: 5px;
+    width: 180px;
+    border-radius: 20px;
+    margin-left: 18px;
+    cursor: pointer;
+    justify-content: center;
+    position: sticky;
+    display: flex;
+    bottom: 10px;
+    border: none;
+
+}

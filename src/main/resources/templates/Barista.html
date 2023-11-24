@@ -3,46 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../static/css/barista-order.css" rel="stylesheet">
     <title>Barista Dashboard</title>
 
     <!-- JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <link rel="stylesheet" href="/css/barista.css">
+    
 
-    <script>
-        // Function to connect to WebSocket
-        function connectWebSocket() {
-            var socket = new SockJS('/websocket-endpoint');
-            var stompClient = Stomp.over(socket);
-
-            stompClient.connect({}, function (frame) {
-                console.log('Connected: ' + frame);
-
-                // Subscribe to Barista topic
-                stompClient.subscribe('/topic/barista', function (message) {
-                    // Update the notification section
-                    $('#notification').text(message.body);
-                });
-            });
-        }
-
-        // Call the connectWebSocket function when the page is loaded
-        $(document).ready(function () {
-            connectWebSocket();
-        });
-    </script>
+    
 </head>
 <body>
-   
-    <!-- Notification Section -->
-<div class="notification" id="notification"><img src="/images/notification.png"></div>
+   <div class="header">
+        <a href="./barista-dashboard.html">
+            <img src="../static/images/home.png">
+        </a>
+        <h1>Orders</h1>
+        <hr>
+   </div>
+   <div class="container">
+        
+        <div id="drink-receipt">           
+            <div id="queue-num">A01</div>
+            <div id="drink-list"> 
+                <p id="name">Latte : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Caramel Machiato : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Brownie : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="btn">
+                <button id="confirm-btn" onclick="removeItem">Confirm Order</button> 
+            </div>
+        </div>
+        <div id="drink-receipt">           
+            <div id="queue-num">A02</div>
+            <div id="drink-list"> 
+                <p id="name">Latte : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Caramel Machiato : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Brownie : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="btn">
+                <button id="confirm-btn" onclick="removeItem">Confirm Order</button> 
+            </div>
+        </div>
+        <div id="drink-receipt">           
+            <div id="queue-num">A03</div>
+            <div id="drink-list"> 
+                <p id="name">Latte : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Caramel Machiato : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Brownie : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="btn">
+                <button id="confirm-btn" onclick="removeItem">Confirm Order</button> 
+            </div>
+        </div>
+        <div id="drink-receipt">           
+            <div id="queue-num">A04</div>
+            <div id="drink-list"> 
+                <p id="name">Latte : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Caramel Machiato : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="drink-list"> 
+                <p id="name">Brownie : </p>
+                <p id="quantity"> 1 </p>
+            </div>
+            <div id="btn">
+                <button id="confirm-btn" onclick="removeItem">Confirm Order</button> 
+            </div>
+        </div>
+        
+       
+       
+        
+        
+        
+   </div>
 
-<h1>Barista</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
 <!-- Display Barista Orders -->
-<div class="container">
+<!-- <div class="container">
 <h2>Barista Orders</h2>
 <table>
     <thead>
@@ -52,27 +134,49 @@
             <th>Order Details</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody> -->
         <!-- Use Thymeleaf to loop through Barista orders -->
-        <tr th:each="order : ${baristaOrders}">
+        <!-- <tr th:each="order : ${baristaOrders}">
             <td th:text="${order.id}"></td>
             <td th:text="${order.customerName}"></td>
             <td th:text="${order.orderDetails}"></td>
         </tr>
     </tbody>
 </table>
-</div>
+</div> -->
 
 
 
 
 
-<script th:inline="javascript">
+<!-- <script th:inline="javascript">
     /*<![CDATA[*/
     var somedata = /*[[${test}]]*/ 'default';
     console.log(somedata);
     /*]]>*/
 </script>
+<script>
+    // Function to connect to WebSocket
+    function connectWebSocket() {
+        var socket = new SockJS('/websocket-endpoint');
+        var stompClient = Stomp.over(socket);
 
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+
+            // Subscribe to Barista topic
+            stompClient.subscribe('/topic/barista', function (message) {
+                // Update the notification section
+                $('#notification').text(message.body);
+            });
+        });
+    }
+
+    // Call the connectWebSocket function when the page is loaded
+    $(document).ready(function () {
+        connectWebSocket();
+    });
+</script> -->
+    <script src="../static/js/barista-order.js"></script>
 </body>
 </html>
