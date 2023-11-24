@@ -1,5 +1,6 @@
 function confirmOrders (){
     document.getElementById('confirm-btn').addEventListener('click' , removeItem);
+
 }
 confirmOrders();
 
