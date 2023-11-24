@@ -2,11 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/barista.css">
     <title th:text="${daily != null ? 'Edit Sales' : 'Add Sales'}">Edit Sales</title>
 </head>
 <body>
+    <div class="notification" id="notification"><img src="/images/notification.png"></div>
     <h1 th:text="${daily != null ? 'Edit Sales' : 'Add Sales'}">Edit Sales</h1>
+    <div class="container">
     <form th:action="${daily != null ? '/dailysale/' + daily.id + '/edit' : '/dailysale'}" th:object="${daily}" method="post">
+        <div class="text">Input daily total sale</div>
         <input type="hidden" th:field="*{id}">
         <div>
             <label for="name">Name:</label>
@@ -18,12 +22,64 @@
         </div>
         <div>
             <label for="date">Date:</label>
-            <input type="date" id="date" th:field="*{date}" required>
+            <input type="date" id="date" th:field="*{date}" required class="date">
         </div>
         <div>
             <button type="submit">Update Sales</button>
         </div>
+        <a href="/dailysale">Cancel</a>
     </form>
-    <a href="/dailysale">Cancel</a>
+</div>
 </body>
+<style>
+    .container{
+        padding: 20px;
+        height: 690px;
+        flex-shrink: 0;
+        text-align: center;
+    }
+    form{
+        position: relative;
+        top: 100px;
+        margin: 20px;
+    }
+    a{
+        position: relative;
+        top: 30px;
+        text-decoration: none;
+        font-size: 20px;
+        color: red;
+        
+    }
+    input{
+        margin: 10px;
+        border: none;
+        width: 325px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 9px;
+        background: linear-gradient(180deg, #FFF 99.99%, rgba(170, 113, 58, 0.00) 100%);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding-left: 5px;
+    }
+    .date{
+        width: 150px;
+        height: 30px;
+    }
+    button{
+        width: 200px;
+        height: 30px;
+        margin-top: 20px;
+        color: #FFF;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color: rgb(27, 145, 255);
+    }
+    .text{
+        font-size: 40px;
+        font-family: Itim;
+        margin-bottom: 20px;
+    }
+</style>
 </html>
