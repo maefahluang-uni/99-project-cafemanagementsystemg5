@@ -6,10 +6,11 @@
     <title>Daily Sales List</title>
 </head>
 <body>
-    <a href="/barista-dashboard.html" class="home">
+    <a href="/barista-dashboard" class="home">
         <img src="/images/home.png">
     </a>
     <h1>Daily Sales List</h1>
+    <button id="send-daily">Send Daily Total sale</button>
 <div class="container">
     <h2>Sales List</h2>
     <table>
@@ -36,6 +37,15 @@
         
     </table>
 </div>
+    <script>
+        const check = document.getElementById("send-daily");
+
+        check.addEventListener("click",function(){
+
+            alert("Sales submitted.");
+        });
+    </script>
+
 </body>
 <style>
     .btn{
@@ -49,6 +59,16 @@
         position: relative;
         top: 100px;
         left: 2%;
+    }
+    #send-daily{
+        border-radius: 30px;
+        background: #AA713A;
+        display: inline;
+        padding: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: large;
     }
 </style>
 </html>
