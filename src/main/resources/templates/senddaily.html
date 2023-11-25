@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link href="../static/css/barista.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>Daily Sales List</title>
 </head>
 <body>
+    <a href="./barista-dashboard.html" class="home">
+        <img src="../static/images/home.png">
+    </a>
     <h1>Daily Sales List</h1>
-
+<div class="container">
+    <h2>Sales List</h2>
     <table>
         <thead>
             <tr>
@@ -30,5 +35,20 @@
         </tbody>
         
     </table>
+</div>
 </body>
+<style>
+    .btn{
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(37, 148, 252);
+        color: #fff;
+        border-radius: 20px;
+    }
+    .home{
+        position: relative;
+        top: 100px;
+        left: 2%;
+    }
+</style>
 </html>
