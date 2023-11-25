@@ -33,6 +33,12 @@ Customer Functions:
 - Checkout, leading to the payment page.
 - Receive order notifications and queue updates, with notifications upon order completion.
 
+
+# Customer QR CODE
+
+![Alt text](<Customer Ordering QR Code.png>)
+
+
 # 2. Barista
 https://lab-cd-s2b2ammevq-uc.a.run.app/login 
 Username : Barista 
