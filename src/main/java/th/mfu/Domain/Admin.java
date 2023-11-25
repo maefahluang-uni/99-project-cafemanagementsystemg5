@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import java.util.Date;
 
 @Entity
 @Table(name="TBL_ADMIN")
@@ -28,7 +28,9 @@ public class Admin {
 
     @OneToMany(mappedBy = "admin")
     private List<Stock> stocks;
-    
+     @OneToOne(mappedBy = "admin")
+    private DailySale dailySale;
+
 
     public Long getId() {
         return id;
@@ -63,6 +65,12 @@ public class Admin {
     }
     public void setStocks(List<Stock> stocks) {
         this.stocks = stocks;
+    }
+    public DailySale getDailySale() {
+        return dailySale;
+    }
+    public void setDailySale(DailySale dailySale) {
+        this.dailySale = dailySale;
     }
 
     

@@ -69,4 +69,11 @@ public class BaristaController {
     }
     return "redirect:/dailysale";
 }
+
+    @GetMapping ("ordercustomer")
+    public String checkordercus(Model model){
+        model.addAttribute("order", new Menu());
+        return "Barista";
+    }
+
 }

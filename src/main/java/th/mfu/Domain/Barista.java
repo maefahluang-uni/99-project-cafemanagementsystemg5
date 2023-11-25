@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Barista {
@@ -23,6 +24,15 @@ public class Barista {
 
     @OneToMany(mappedBy = "barista")
     private List<Customer> customers;
+    public DailySale getDailySale() {
+        return dailySale;
+    }
+    public void setDailySale(DailySale dailySale) {
+        this.dailySale = dailySale;
+    }
+    @OneToOne(mappedBy = "barista")
+    private DailySale dailySale;
+
 
 
     public Long getId() {
