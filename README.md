@@ -41,7 +41,9 @@ Customer Functions:
 
 # 2. Barista
 https://lab-cd-s2b2ammevq-uc.a.run.app/login 
+
 Username : Barista 
+
 Password : 1234
 
 Barista Functions:
@@ -52,7 +54,9 @@ Barista Functions:
 
 # 3. Admin
 https://lab-cd-s2b2ammevq-uc.a.run.app/login 
+
 Username : Admin 
+
 Password : 1234
 
 The Admin is responsible for daily stock monitoring, inventory management, and overseeing daily total sales.
