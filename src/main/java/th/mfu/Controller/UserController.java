@@ -48,4 +48,14 @@ public class UserController {
         model.addAttribute("addMenu", AddMenu(model));
         return "main";
     }
+    @GetMapping("/blank")
+    public String payment(Model model){
+        model.addAttribute("payment", model);
+        return "blank";
+    }
+    @GetMapping("/queue")
+    public String queue(Model model){
+        model.addAttribute("queue", model);
+        return "queue";
+    }
 }
